@@ -151,7 +151,7 @@ void SortVocab() {
   size = vocab_size;
   train_words = 0;
   for (a = 0; a < size; a++) {
-    // Words occuring less than min_count times will be discarded from the vocab
+    // Words occurring less than min_count times will be discarded from the vocab
     if ((vocab[a].cn < min_count) && (a != 0)) {
       vocab_size--;
       free(vocab[a].word);
