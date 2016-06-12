@@ -120,7 +120,7 @@ void SortVocab() {
   qsort(&vocab[1], vocab_size - 1, sizeof(struct vocab_word), VocabCompare);
   for (a = 0; a < vocab_hash_size; a++) vocab_hash[a] = -1;
   for (a = 0; a < vocab_size; a++) {
-    // Words occuring less than min_count times will be discarded from the vocab
+    // Words occurring less than min_count times will be discarded from the vocab
     if (vocab[a].cn < min_count) {
       vocab_size--;
       free(vocab[vocab_size].word);
